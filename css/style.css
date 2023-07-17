@@ -106,3 +106,15 @@ h1 {
         font-size: 12px;
     }
 }
+
+@media only screen and (max-width: 362px) {
+    .box {
+        width: 320px;
+        font-size: 13px;
+    }
+
+    .text-location {
+        font-size: 17px;
+    }
+    
+}
