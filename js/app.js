@@ -9,6 +9,10 @@ let battery_lvl = document.querySelector(".text-battery");
 let btn = document.querySelector(".btn");
 let map = document.getElementById("map")
 
+function btnClose() {
+    window.close()
+}
+
 btn.addEventListener("click", ()=> {
     
     text.classList.add("open-text")
