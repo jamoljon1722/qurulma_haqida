@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Hind+Madurai:wght@400;500&family=Poppins&family=Roboto&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -28,7 +31,7 @@ span {
 }
 
 h2 {
-    padding-top: 30px;
+    padding-top: 25px;
 }
 
 .box {
@@ -74,27 +77,28 @@ h1 {
 
 @media only screen and (max-width: 452px) {
     .box {
-        width: 400px;
+        width: 395px;
+        font-size: 13px;
     }
 }
 
 @media only screen and (max-width: 406px) {
     .box {
         width: 380px;
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 
 @media only screen and (max-width: 390px) {
     .box {
         width: 350px;
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 
 @media only screen and (max-width: 360px) {
     .box {
         width: 320px;
-        font-size: 13px;
+        font-size: 12px;
     }
 }
