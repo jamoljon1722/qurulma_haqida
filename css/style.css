@@ -8,7 +8,7 @@
 }
 
 body {
-    background: linear-gradient(to right, #0ef, #0084ff, #00b7ff);
+    background: #0084ff;
 }
 
 .container {
@@ -16,12 +16,12 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-top: 90px;
+    padding-top: 40px;
 }
 
 .container p {
     position: relative;
-    top: 20px;
+    bottom: 10px;
     font-size: 16px;
     color: #fff;
 }
@@ -60,6 +60,7 @@ h1 {
 }
 
 .btn {
+    cursor: pointer;
     width: 130px;
     height: 30px;
     font-size: 1em;
@@ -89,7 +90,7 @@ h1 {
     cursor: pointer;
     position: relative;
     left: 180px;
-    top: 30px;
+    bottom: 200px;
     background: none;
     border: none;
     width: 70px;
@@ -115,6 +116,10 @@ h1 {
     .text-location {
         font-size: 15px;
     }
+
+    .close-btn {
+        margin-right: 60px;
+    }
 }
 
 @media only screen and (max-width: 406px) {
@@ -137,6 +142,10 @@ h1 {
     .text-location {
         font-size: 11px;
     }
+
+    .close-btn {
+        margin-right: 100px;
+    }
 }
 
 @media only screen and (max-width: 360px) {
@@ -147,6 +156,10 @@ h1 {
 
     .text-location {
         font-size: 12px;
+    }
+
+    .close-btn {
+        margin-right: 130px;
     }
 }
 
