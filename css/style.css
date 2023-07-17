@@ -46,6 +46,10 @@ h2 {
     color: #fff;
 }
 
+.text-location {
+    font-size: 23px;
+}
+
 h1 {
     display: none;
 }
