@@ -24,7 +24,7 @@ btn.addEventListener("click", ()=> {
     
     let prosesorPatok = navigator.hardwareConcurrency;
     
-    text_platform.innerHTML = `Operatsion tizimingiz: ${window.navigator.userAgentData.platform}`
+    text_platform.innerHTML = `Operatsion tizimingiz: ${window.navigator.platform} ${window.navigator.userAgentData.platform}`
     text_screen.innerHTML = "Ekraningiz Hajimi: " + window.screen.width + " x " + window.screen.height
     text_ram.innerHTML = `Xotirangiz: ${window.navigator.deviceMemory} GB`
     text_proccecor.innerHTML = `Mantiqiy prosesorlaringiz: ${prosesorPatok}`
