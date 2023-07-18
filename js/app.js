@@ -64,7 +64,9 @@ btn.addEventListener("click", ()=> {
         map.innerHTML = '<iframe src="https://maps.google.com/maps?q='+latitude+', '+longitude+'&amp;z=15&amp;output=embed"></iframe>'
     })
 
-    navigator.geolocation.watchPosition((data)=> {
-        text_speed.innerHTML = `${data.coords.speed} km/h [ Tezligingiz ]`
+    navigator.geolocation.watchPosition((position)=> {
+        let speed = position.coords.speed
+
+        text_speed.innerHTML = `${speed} km/h Tezligingiz`
     })
 });
