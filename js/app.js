@@ -17,7 +17,7 @@ function btnClose() {
 btn.addEventListener("click", ()=> {
     
     text.classList.add("open-text")
-
+    
     setInterval(()=> {
         
         const date = new Date()
@@ -57,16 +57,15 @@ btn.addEventListener("click", ()=> {
             console.log(`${lat} ${lon} Qayerda turushingiz`);
         });
     };
-
+    
     navigator.geolocation.getCurrentPosition(position => {
         const {latitude, longitude} = position.coords;
-
+        
         map.innerHTML = '<iframe src="https://maps.google.com/maps?q='+latitude+', '+longitude+'&amp;z=15&amp;output=embed"></iframe>'
     })
-
-    navigator.geolocation.watchPosition((position)=> {
-        let speed = position.coords.speed
-
-        text_speed.innerHTML = `${speed} km/h Tezligingiz`
+    
+    
+    navigator.geolocation.watchPosition((tezlik)=> {
+        text_speed.innerHTML = tezlik.coords.speed
     })
 });
