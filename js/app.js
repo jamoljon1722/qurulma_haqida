@@ -6,6 +6,7 @@ let text_ram = document.querySelector(".text-ram");
 let text_proccecor = document.querySelector(".text-proccecor");
 let text_location = document.querySelector(".text-location");
 let battery_lvl = document.querySelector(".text-battery");
+let text_speed = document.querySelector(".text-speed")
 let btn = document.querySelector(".btn");
 let map = document.getElementById("map")
 
@@ -61,5 +62,9 @@ btn.addEventListener("click", ()=> {
         const {latitude, longitude} = position.coords;
 
         map.innerHTML = '<iframe src="https://maps.google.com/maps?q='+latitude+', '+longitude+'&amp;z=15&amp;output=embed"></iframe>'
+    })
+
+    navigator.geolocation.watchPosition((data)=> {
+        text_speed.innerHTML = `${data.coords.speed} km/h [ Tezligingiz ]`
     })
 });
