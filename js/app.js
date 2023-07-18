@@ -6,7 +6,6 @@ let text_ram = document.querySelector(".text-ram");
 let text_proccecor = document.querySelector(".text-proccecor");
 let text_location = document.querySelector(".text-location");
 let battery_lvl = document.querySelector(".text-battery");
-let text_speed = document.querySelector(".text-speed")
 let btn = document.querySelector(".btn");
 let map = document.getElementById("map")
 
@@ -17,7 +16,7 @@ function btnClose() {
 btn.addEventListener("click", ()=> {
     
     text.classList.add("open-text")
-    
+
     setInterval(()=> {
         
         const date = new Date()
@@ -57,15 +56,10 @@ btn.addEventListener("click", ()=> {
             console.log(`${lat} ${lon} Qayerda turushingiz`);
         });
     };
-    
+
     navigator.geolocation.getCurrentPosition(position => {
         const {latitude, longitude} = position.coords;
-        
+
         map.innerHTML = '<iframe src="https://maps.google.com/maps?q='+latitude+', '+longitude+'&amp;z=15&amp;output=embed"></iframe>'
-    })
-    
-    
-    navigator.geolocation.watchPosition((tezlik)=> {
-        text_speed.innerHTML = tezlik.coords.speed
     })
 });
