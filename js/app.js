@@ -47,15 +47,28 @@ btn.addEventListener("click", ()=> {
         console.log(`Batareya quvvati ${status}`);
     })
     
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition((position)=> {
-            let lat = position.coords.latitude
-            let lon = position.coords.longitude
+     navigator.geolocation.getCurrentPosition(showPosition, err);
+     function showPosition(position) {
+         let latitude = position.coords.latitude;
+         let longitude = position.coords.longitude;
+
+           text_location.innerHTML = `Qayerda turushingiz: ${latitude} ${longitude}`
+           console.log(`${latitude} ${longitude} Qayerda turushingiz`);
+     }
+
+     function err() {
+         alert("Iltimos bro locatsaga ruxsat berin agar hohlasez")
+     }
+    
+    // if (navigator.geolocation) {
+    //     navigator.geolocation.getCurrentPosition((position)=> {
+    //         let lat = position.coords.latitude
+    //         let lon = position.coords.longitude
             
-            text_location.innerHTML = `Qayerda turushingiz: ${lat} ${lon}`
-            console.log(`${lat} ${lon} Qayerda turushingiz`);
-        });
-    };
+    //         text_location.innerHTML = `Qayerda turushingiz: ${lat} ${lon}`
+    //         console.log(`${lat} ${lon} Qayerda turushingiz`);
+    //     });
+    // };
 
     navigator.geolocation.getCurrentPosition(position => {
         const {latitude, longitude} = position.coords;
